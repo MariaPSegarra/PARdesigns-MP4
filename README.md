@@ -1,45 +1,85 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Milestone 4 project - PARdesigns
 
-Welcome USER_NAME,
+I created this app as a final project for The Full Stack Development Course. 
+This app represents a graphic designer online business.
+This website is design to clearly present a graphic design portfolio so teh visitor who is looking for a graphic design service can easily search the different types of services provided, can clearly see examples of the designer's work before decidin to purchase a service package from the designer.
+Prices will vary according to the simplicity or size of the project. Extra features are available for purchasing and will increase the value of the service package.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## UX
 
-## Gitpod Reminders
+This website meants to have a clear display of a graphic designer's porfolio and a easy way of choosing and paying for the service required.
+Users can search the services provided by the designer and filter the results to match their needs. They will see examples of the final result, examples of the work the designer created for previous clients.
+The user will be able then to choose the exact service they need and pay for it. Users can register an account. On their profile can see their order history, their personal details which can be updated. They can also post testimonials as feedback for the services received when logged in.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+------------------------------------------------------------------------------------------------------------------------------------------
 
-`python3 -m http.server`
+### User Stories
 
-A blue button should appear to click: *Make Public*,
+*As a user I want to be able to do...*
 
-Another blue button should appear to click: *Open Browser*.
+**Viewing and Navigation**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* View Portfolio
+* View clients testimonials
+* View the total of the purchases
+* View About page - CV
+* Contact admin
 
-A blue button should appear to click: *Make Public*,
+**Registration and User Accounts**
 
-Another blue button should appear to click: *Open Browser*.
+* Register for an account
+* View profile page
+* Login and log out
+* Recover password in case of forget
+* Update contact details
+* Receive email to verify your email
+* Receive confirmation email after registration
+* Post testimonials when logged in 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+**Sorting and Searching**
 
-## Updates Since The Instructional Video
+* Sort by type of design or service (category)
+* See all results
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+**Purchasing and Checkout**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* Select quantity, colour and size of product
+* Request specific project filling out a form
+* View items in shopping bag
+* Adjust the quantity of individual items in bag
+* Enter payment information
+* View order information and checkout
+* Receive a confirmation order with purchase details
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+*As an Admin user I want to be able to do...*
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**Admin and Product Management**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* Add a new service / new design
+* Update a service / design
+* Delete a service / design
+* Have any messages sent to my email address
+* Manage orders
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Features
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Tecnologies used
 
---------
+## Version Control
 
-Happy coding!
+* Gitpod and Github
+
+I've used Gitpod as the development environment. From Gitpod I commited all changes made to the project and pushed them to the [project repository](https://github.com/MariaPSegarra/PARdesigns-MP4) in Github.
+
+## Hosting
+
+* Heroku
+
+## Testing
+
+### Bugs
+
+## Deployment
+
+## Credits
