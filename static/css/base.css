@@ -2,6 +2,14 @@ html {
     height: 100%;
 }
 
+body .no-home {
+    background: #bfbdbe;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Montserrat';
+}
+
 body {
     background: url('/media/homepage-final.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -19,16 +27,12 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
-
 .main-logo-link {
     width: fit-content;
 }
 
 .start-button {
-    background: #E84462;
+    background: black;
     color: white;
     min-width: 260px;
 }
@@ -48,8 +52,8 @@ body {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
+.text-white {
+    color: #ffffff !important;
 }
 
 .border-black {
