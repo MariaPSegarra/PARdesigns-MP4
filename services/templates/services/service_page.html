@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h2 class="text-white text-uppercase"> {{ category.friendly_name }} portfolio</h2>
+                <h2 class="text-white text-uppercase"> {{ category.friendly_name }}</h2>
             </div>
         </div>
         <div class="row-designs">
@@ -16,11 +16,12 @@
     			<div id="carouseldesigns" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
 					{% for design in services %} 
-                        <div class="carousel-item active">
-                             <a href="{{ design.image.url }}" target="_blank">
-                                <img class="d-block w-100 img-fluid" src="{{ design.image.url }}" alt="{{ design.name }}">
-                            </a>
+                            <div class="carousel-item {% if forloop.first %} active {% endif %}">
+                                <a href="{{ design.image.url }}" target="_blank">
+                                    <img class="w-100 img-fluid" src="{{ design.image.url }}" alt="{{ design.name }}">
+                                </a>
                         </div>
+
 					  {% endfor%}
                     </div>
                 </div>
@@ -37,12 +38,3 @@
 
 {% endblock %}
 
-{% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-		$('#carouseldesigns').carousel({
-            
-
-        } );
-    </script>
-{% endblock %}

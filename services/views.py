@@ -3,7 +3,7 @@ from django.shortcuts import (
     reverse, get_object_or_404)
 from django.contrib import messages
 from django.db.models import Q
-from .models import Category
+from .models import Category, Design
 
 # Create your views here.
 
@@ -13,7 +13,7 @@ def all_services(request):
 
     services = Category.objects.all()
     query = None
-
+   
     if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
@@ -29,18 +29,24 @@ def all_services(request):
     context = {
         'services': services,
         'search_term': query,
+
     }
 
     return render(request, 'services/services.html', context)
 
 
-def service_page(request, category_id):
+def service_page(request, category_id, desing_id):
     """ A view to show each service page """
 
-    service = get_object_or_404(Category, pk=category_id)
+    services = Category.objects.all()
+    category = get_object_or_404(Category, pk=category_id)
+    design = get_object_or_404(Design, pk=design_id)
 
     context = {
-        'service': service,
+        'services': services,
+        'category': category,
+        'design': design,
+
     }
 
     return render(request, 'services/service_page.html', context)
