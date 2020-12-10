@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="text-white text-uppercase">Choose your service</h2>
+            </div>
+        </div>
+         {% for category in services %} 
+        <div class="row-category">
+            <div class="col-12">
+                <div class="card text-white bg-dark mb-3 h-100 border-0">
+                    <h5 class="card-header text-uppercase mt-2">{{ category.friendly_name }}</h5>
+                    <div class="card-body">
+                        <p class="card-text">{{ category.description }}</p>
+                        <a href="#" class="order-btn btn btn-primary text-uppercase my-auto">Order yours</a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

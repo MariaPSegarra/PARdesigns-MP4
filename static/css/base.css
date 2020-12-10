@@ -2,14 +2,6 @@ html {
     height: 100%;
 }
 
-body .no-home {
-    background: #bfbdbe;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Montserrat';
-}
-
 body {
     background: url('/media/homepage-final.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -31,24 +23,39 @@ body {
     width: fit-content;
 }
 
-.start-button {
+.select-btn {
     background: black;
+    color: white; 
+    border: 0px;
+}
+
+.select-btn:hover,
+.select-btn:active,
+.select-btn:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus
+ {
+    background: #222;
     color: white;
-    min-width: 260px;
+}
+
+.order-btn {
+    background: #686e81;
+    color: white;
+    border: 0px; 
+}
+
+.order-btn:hover,
+.order-btn:active,
+.order-btn:focus
+ {
+    background: #535e82;
+    color: white;
 }
 
 .btn-black {
     background: black;
-    color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
     color: white;
 }
 
@@ -59,6 +66,17 @@ body {
 .border-black {
     border: 1px solid black !important;
 }
+
+.card-header {
+    margin-top: 5px;
+    color: #e84462;
+}
+
+.row-category {
+    margin:auto;
+    width: 70%
+}
+
 
 /* -------------------------------- Media Queries */
 
