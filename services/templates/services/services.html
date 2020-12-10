@@ -18,7 +18,7 @@
                     <h5 class="card-header text-uppercase mt-2">{{ category.friendly_name }}</h5>
                     <div class="card-body">
                         <p class="card-text">{{ category.description }}</p>
-                        <a href="#" class="order-btn btn btn-primary text-uppercase my-auto">Order yours</a>
+                        <a href="{% url 'service_page' category.id %}" class="order-btn btn btn-primary text-uppercase my-auto">Order yours</a>
                     </div>
                 </div>
             </div> 

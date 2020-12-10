@@ -72,9 +72,10 @@ body {
     color: #e84462;
 }
 
-.row-category {
-    margin:auto;
-    width: 70%
+.row-category,
+.row-designs {
+    margin: auto;
+    width: 75%
 }
 
 
