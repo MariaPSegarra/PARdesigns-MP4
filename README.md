@@ -36,9 +36,9 @@ The user will be able then to choose the exact service they need and pay for it.
 * Receive confirmation email after registration
 * Post testimonials when logged in 
 
-**Sorting and Searching**
+**Searching**
 
-* Sort by type of design or service (category)
+* Search for services (category)
 * See all results
 
 **Purchasing and Checkout**
