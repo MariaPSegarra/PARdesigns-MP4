@@ -19,6 +19,20 @@
                     <div class="card-body">
                         <p class="card-text">{{ category.description }}</p>
                         <a href="{% url 'service_page' category.id %}" class="order-btn btn btn-primary text-uppercase my-auto">Order yours</a>
+                         {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_service' category.id %}">
+                                      <span class="icon">
+                                            <i class="fas fa-edit"></i>
+                                    </span>
+                                    <span class="text-uppercase text-white">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_service' category.id %}">
+                                    <span class="icon">
+                                            <i class="fas fa-trash-alt"></i>
+                                    </span>
+                                    <span class="text-uppercase text-white"> Delete</a>
+                            </small>
+                         {% endif %}
                     </div>
                 </div>
             </div> 

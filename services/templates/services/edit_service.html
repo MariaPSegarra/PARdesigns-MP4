@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center my-5">
+                <h2 class="text-white text-uppercase"> Services Management</h2>
+                <h5 class="lead text-white">Edit a service</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form method="POST" action="{% url 'edit_service' %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                        {{ field }}
+                {% endfor %}
+                <div class="text-right">
+                    <a class="btn cart-btn rounded-0 text-uppercase mt-5 ml-2" href="{% url 'services' %}">Cancel</a>
+                    <button class="order-btn btn btn-primary text-uppercase my-auto" type="submit">Update service</button>
+                </div>
+            </form>
+        </div>            
+    </div>
+   
+{% endblock %}
