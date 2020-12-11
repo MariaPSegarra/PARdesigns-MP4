@@ -54,6 +54,19 @@ body {
     color: white;
 }
 
+.cart-btn {
+    background: #e84462;
+    color: white;
+}
+
+.cart-btn:hover,
+.cart-btn:active,
+.cart-btn:focus
+ {
+    background: #a33247;
+    color: white;
+}
+
 .btn-black {
     background: black;
     color: white;

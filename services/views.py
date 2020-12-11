@@ -13,7 +13,8 @@ def all_services(request):
 
     services = Category.objects.all()
     query = None
-   
+    category= None
+
     if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
@@ -35,18 +36,15 @@ def all_services(request):
     return render(request, 'services/services.html', context)
 
 
-def service_page(request, category_id, desing_id):
-    """ A view to show each service page """
+def service_page(request, category_id):
+    """ A view to show each service page with their designs """
 
     services = Category.objects.all()
     category = get_object_or_404(Category, pk=category_id)
-    design = get_object_or_404(Design, pk=design_id)
 
     context = {
         'services': services,
         'category': category,
-        'design': design,
-
     }
 
     return render(request, 'services/service_page.html', context)
