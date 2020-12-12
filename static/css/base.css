@@ -23,12 +23,6 @@ body {
     width: fit-content;
 }
 
-.select-btn {
-    background: black;
-    color: white; 
-    border: 0px;
-}
-
 .select-btn:hover,
 .select-btn:active,
 .select-btn:focus,
@@ -89,6 +83,17 @@ body {
 .row-designs {
     margin: auto;
     width: 75%
+}
+
+/* ------------------------------- contact page */
+.contact-row {
+    margin: auto;
+    width: 75%;
+    background: #686e81;   
+}
+
+.contact-card {
+    background: #686e81;   
 }
 
 /* ------------------------------- bootstrap toasts */
