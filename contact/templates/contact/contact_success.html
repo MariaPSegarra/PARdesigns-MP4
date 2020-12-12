@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center my-5">
+                <h2 class="text-white text-uppercase">Thank you!</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center my-5">
+                <h2 class="lead text-white">Your message has been sent successfully. <br>
+                Someone from the PARdesigns team will contact you soon.</h2>
+            </div>
+        </div>
+        <div class="col-12 mt-2 pb-3">
+            <a href="{% url 'home' %}" class="btn order-btn rounded-0 mt-5">
+                <span class="icon">
+                    <i class="fas fa-home"></i>
+                </span>
+                <span class="text-uppercase text-white">home</span>
+            </a>
+         </div>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}
