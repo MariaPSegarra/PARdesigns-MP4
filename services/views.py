@@ -4,7 +4,7 @@ from django.shortcuts import (
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
-from .models import Category
+from .models import Category, Design
 from .forms import CategoryForm
 
 # Create your views here.
@@ -42,10 +42,12 @@ def service_page(request, category_id):
 
     services = Category.objects.all()
     category = get_object_or_404(Category, pk=category_id)
+    designs = Design.objects.all()
 
     context = {
         'services': services,
         'category': category,
+        'designs': designs,
     }
 
     return render(request, 'services/service_page.html', context)

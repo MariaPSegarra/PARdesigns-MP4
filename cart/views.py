@@ -36,7 +36,7 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
-def adjust_cart(request, item_id):
+def update_cart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
 
     category = get_object_or_404(Category, pk=item_id)
