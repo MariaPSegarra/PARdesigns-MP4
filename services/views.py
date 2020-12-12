@@ -15,6 +15,7 @@ def all_services(request):
 
     services = Category.objects.all()
     query = None
+    categories = None
 
     if request.GET:
         if 'q' in request.GET:
@@ -26,7 +27,7 @@ def all_services(request):
 
             queries = Q(
                 name__icontains=query) | Q(description__icontains=query)
-            services = services.filter(queries)
+            services = categories.filter(queries)
 
     context = {
         'services': services,
