@@ -48,6 +48,7 @@ body {
 .cart-btn {
     background: #e84462;
     color: white;
+    border: 0px; 
 }
 
 .cart-btn:hover,
@@ -92,6 +93,11 @@ body {
 
 .contact-card {
     background: #686e81;   
+}
+
+input, textarea {
+    width: 75%;
+    margin-bottom: 5px;
 }
 
 /* ------------------------------- bootstrap toasts */

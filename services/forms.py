@@ -6,15 +6,24 @@ class CategoryForm(forms.ModelForm):
 
     class Meta:
         model = Category
-        fields = '__all__'
-
-    image = forms.ImageField(label='Image', required=False)
+        fields = ('name', 'friendly_name', 'description',
+                  'price',)
 
     def __init__(self, *args, **kwargs):
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
         super().__init__(*args, **kwargs)
-        services = Category.objects.all()
-        friendly_names = [(c.id, c.get_friendly_name()) for c in services]
+        placeholders = {
+            'name': 'Service Name (use underscore instead of spaces)',
+            'friendly_name': 'Service Name as to be displayed on the site',
+            'description': 'Service description',
+            'price': 'Service package price',
+        }
 
-        self.fields['category'].choices = friendly_names
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0'
+        for field in self.fields:
+            placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].label = False

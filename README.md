@@ -141,6 +141,8 @@ I don't seem to be able to display the desings images in the carousel.
 
 ## Deployment
 
+Followed all steps described in the videos. Deployment is made directly on the Heroku site, linking my repository from Github to Heroku.
+
 ## Credits
 
 [images] come from:
@@ -152,6 +154,7 @@ I don't seem to be able to display the desings images in the carousel.
 I never had enough time to do the projects. I understand that every situation is different and even though your student service staff and 
 everyone in general has been nothing but supportive and flexible, being a single mum with a full time job has made it very difficult to arrive to the end.
 
-I was happy though that at the end of this course was able to understand how everything is connected; views, urls and templates.
+I was happy though that at the end of this course was able to have a better understanding of how connections work; views, urls and templates.
+I still have much to learn about rendering the exact information.
 It the end it all made sense and again, I'd like to be able to show everything that I learnt.
 I will be doing more short courses to complement the areas I think I felt short and I have more trouble with, ie. Javascript.

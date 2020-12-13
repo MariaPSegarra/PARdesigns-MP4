@@ -14,9 +14,9 @@
 
         <div class="contact-row py-5">
             <div class="col-12">
-                <div class="contact-card text-white ml-5 mb-3 h-100 border-0">
+                <div class="contact-card text-white mx-auto mb-3 h-100 border-0">
                    <form method="POST" action="{% url 'contact' %}">
-                        <div class=" col-12 text-center mt-4">
+                        <div class=" col-12 mt-4">
                         {% csrf_token %}
                         {{ contact_form|crispy }}
                         </div>

@@ -62,14 +62,14 @@ def add_service(request):
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = CategoryForm(request.POST, request.FILES)
+        form = CategoryForm(request.POST)
         if form.is_valid():
             category = form.save()
-            messages.success(request, 'Successfully added service!')
+            messages.success(request, 'Service added successfully!')
             return redirect(reverse('service_page', args=[category.id]))
         else:
             messages.error(
-                request, 'Failed to add new service. Please ensure the form is valid.')
+                request, 'Failed to add new service. Please try again.')
     else:
         form = CategoryForm()
 
