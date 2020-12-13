@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'e*lx8n!wrfllzh3t(6o9#g^s4nm#i_g*h8ogpb5zzy(b+qy182'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pardesigns-mps.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -118,13 +119,16 @@ WSGI_APPLICATION = 'pardesigns.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#   'default': {
+#       'ENGINE': 'django.db.backends.sqlite3',
+#       'NAME': BASE_DIR / 'db.sqlite3',
+#   }
+# }
 
+DATABASES = {
+    'default': dj_database_url.parse('postgres://gjooghynhvjmzi:1949b715020dd6e3f104b277310d5adb6d4441ce0e1aa06f10d04b4512e6e9f9@ec2-54-75-150-32.eu-west-1.compute.amazonaws.com:5432/d6lsk3uireorrf')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
