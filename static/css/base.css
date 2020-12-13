@@ -23,9 +23,6 @@ body {
     width: fit-content;
 }
 
-.select-btn:hover,
-.select-btn:active,
-.select-btn:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus
@@ -64,6 +61,7 @@ body {
 .btn-black {
     background: black;
     color: white;
+    border: 0px; 
 }
 
 .text-white {
@@ -76,7 +74,7 @@ body {
 
 .card-header {
     margin-top: 5px;
-    color: #e84462;
+    color: white;
 }
 
 .row-category,

@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.conf import settings
-from profiles.models import UserProfile
 
 
 def contact(request):
@@ -27,15 +26,7 @@ def contact(request):
                 return HttpResponse('Invalid header found.')
             return redirect('contact_success')
     else:
-        if request.user.is_authenticated:
-            profile = UserProfile.objects.get(user=request.user)
-            user_email = profile.user.email
-            contact_form = ContactForm(initial={
-                'full_name': profile.profile_full_name,
-                'from_email': user_email,
-                })
-        else:
-            contact_form = ContactForm()
+        contact_form = ContactForm()
 
     context = {
         'contact_form': contact_form,

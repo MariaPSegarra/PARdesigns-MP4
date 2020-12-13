@@ -16,7 +16,7 @@
         <div class="col-12 h-100 my-5">
     		<div id="carouseldesigns" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                {% for design.image in Design %}
+                {% for designs in Services %}
                     <div class="carousel-item {% if forloop.first %} active {% endif %}">
                         <a href="{{ design.image.url }}" target="_blank">
                             <img class="w-100" src="{{ design.image.url }}" alt="{{ design.name }}">
@@ -34,7 +34,7 @@
                     <h5 class="card-header text-uppercase mt-2">order your {{ category.friendly_name }}  
                         <p class="lead mt-2 text-left text-white">${{ category.price }} per design</p></h5>
                     
-                    <form class="form ml-5" action="{% url 'adjust_cart' item.item_id %}" method="POST">
+                    <form class="form ml-5" action="{% url 'update_cart' item.item_id %}" method="POST">
                         {% csrf_token %}
                             <div class="form-row">
                                 <div class="col-12">
