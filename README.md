@@ -130,6 +130,8 @@ I've used Gitpod as the development environment. From Gitpod I commited all chan
 ## Hosting
 
 * Heroku
+The link to the deployed app is as follows :[PARdesigns](https://pardesigns-mps.herokuapp.com/)
+
 
 ## Testing
 
