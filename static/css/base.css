@@ -87,13 +87,9 @@ body {
 /* ------------------------------- contact page */
 .contact-row {
     margin: auto;
-    width: 75%;
-    background: #686e81;   
+    width: 75%;  
 }
 
-.contact-card {
-    background: #686e81;   
-}
 
 input, textarea {
     width: 75%;

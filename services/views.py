@@ -83,29 +83,29 @@ def add_service(request):
 
 @login_required
 def edit_service(request, category_id):
-    """ Edit a service in the store """
+    """ Edit a service in the site """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only site admins can do that.')
         return redirect(reverse('home'))
 
-    service = get_object_or_404(Category, pk=category_id)
+    category = get_object_or_404(Category, pk=category_id)
     if request.method == 'POST':
-        form = CategoryForm(request.POST, request.FILES, instance=service)
+        form = CategoryForm(request.POST, instance=category)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated category!')
             return redirect(reverse('service_page', args=[category.id]))
         else:
             messages.error(
-                request, 'Failed to update category. Please ensure the form is valid.')
+                request, 'Failed to update service. Please try again.')
     else:
-        form = CategoryForm(instance=service)
+        form = CategoryForm(instance=category)
         messages.info(request, f'You are editing {category.name}')
 
     template = 'services/edit_service.html'
     context = {
         'form': form,
-        'service': service,
+        'category': category,
     }
 
     return render(request, template, context)
@@ -118,7 +118,7 @@ def delete_service(request, category_id):
         messages.error(request, 'Sorry, only site admins can do that.')
         return redirect(reverse('home'))
 
-    service = get_object_or_404(Category, pk=category_id)
-    service.delete()
+    category = get_object_or_404(Category, pk=category_id)
+    category.delete()
     messages.success(request, 'Service deleted!')
     return redirect(reverse('services'))

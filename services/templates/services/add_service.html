@@ -17,7 +17,7 @@
 
     <div class="contact-row">
         <div class="col-12 py-5">
-            <div class="contact-card text-white mx-auto mb-3 h-100 border-0">
+            <div class="text-white mx-auto mb-3 h-100 border-0">
                 <form method="POST" action="{% url 'add_service' %}" class="form mb-2">
                     {% csrf_token %}
                     {% for field in form %}
