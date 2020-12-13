@@ -12,8 +12,7 @@ def contact(request):
     the admin site
     """
 
-    if request.method == 'GET':
-        contact_form = ContactForm()
+    if request.method == 'POST':
         contact_form = ContactForm(request.POST)
         if contact_form.is_valid():
             subject = contact_form.cleaned_data['subject']
