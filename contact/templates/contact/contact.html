@@ -9,27 +9,45 @@
         <div class="row">
             <div class="col-12 text-center my-5">
                 <h2 class="text-white text-uppercase">Contact us</h2>
+                <br>
+                <h5 class="lead text-white">Send us a message</h5>
             </div>
         </div>
 
-        <div class="contact-row py-5">
-            <div class="col-12">
-                <div class="text-white mx-auto mb-3 h-100 border-0">
-                   <form method="POST" action="{% url 'contact' %}">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="text-white h-100 border-0 mx-auto">
+                    <form method="POST" action="{% url 'contact' %}">
                         <div class=" col-12 mt-4">
                         {% csrf_token %}
                         {{ contact_form|crispy }}
                         </div>
                         <div class="text-center mt-4 form-actions">
                             <button type="submit" id="contact-form-btn" 
-                                    class="btn cart-btn text-uppercase w-30%">
+                                class="btn cart-btn text-uppercase w-50% mx-auto">
                                 <i class="fas fa-paper-plane mr-2"></i> Send
                             </button>
                         </div>
                     </form>  
                 </div>
-            </div> 
-        </div>
-    </div>
-
+            </div>
+            <div class="col-12 col-md-6 mt-5">
+                <div class="text-white h-100 border-0 my-auto">
+                    <div class="card-body">
+                        <p class="text-white">
+                            <span class="icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </span>Or call us on: 085.123.4568</p>
+                             <br>
+                        <p class=" text-white">
+                            <span class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>Or find us here:<br><br>
+                            345 Graphic design st.<br>
+                            Dublin 2</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>   
 {% endblock %}

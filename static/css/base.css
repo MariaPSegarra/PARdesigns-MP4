@@ -85,11 +85,6 @@ body {
 }
 
 /* ------------------------------- contact page */
-.contact-row {
-    margin: auto;
-    width: 75%;  
-}
-
 
 input, textarea {
     width: 75%;

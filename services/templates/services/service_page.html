@@ -32,7 +32,7 @@
             <div class="service-order-container mb-5 mt-md-5"></div>  
                 <div class="order-card text-white mb-3 h-100 border-0">
                     <h5 class="card-header text-uppercase mt-2">order your {{ category.friendly_name }}  
-                        <p class="lead mt-2 text-left text-white">${{ category.price }} per design</p></h5>
+                        <p class="lead mt-2 text-left text-white">${{ category.price }} per package design</p></h5>
                     
                     <form class="form ml-5" action="{% url 'update_cart' item.item_id %}" method="POST">
                         {% csrf_token %}
