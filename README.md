@@ -141,6 +141,9 @@ Unfortunately, due to time restrictions, I had no time for testing.
 
 I don't seem to be able to display the desings images in the carousel.
 
+AWS S3 won't render the uploaded media. Right now I can't see the uploaded images.
+I also had problems with S3 when following the steps from the video.
+
 ## Deployment
 
 Followed all steps described in the videos. Deployment is made directly on the Heroku site, linking my repository from Github to Heroku.
